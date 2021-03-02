@@ -1,4 +1,6 @@
 __pycache__
 .*_cache
+.DS_Store
 .venv
 .vscode
+dist
