@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "deppy"
+version = "0.0.0"
+description = "Dependency injection framework for Python"
+authors = ["Cyan Ho <pilagooood@gmail.com>"]
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+
+[tool.poetry.dev-dependencies]
+mypy = "^0.812"
+pytest = "^6.2.2"
+flake8 = "^3.8.4"
+autopep8 = "^1.5.5"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
