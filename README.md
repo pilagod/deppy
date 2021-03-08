@@ -20,8 +20,8 @@ class Greeter:
     def greet(self) -> str:
         return "Hello"
 
-greeter = container.get(Greeter)
-greeter.greet() # Hello
+g = container.get(Greeter)
+g.greet() # Hello
 ```
 
 ### Implementation for abstract class
@@ -42,8 +42,8 @@ class GreeterImpl(Greeter):
     def greeter(self) -> str:
         return "Hello"
 
-greeter = container.get(Greeter)
-greeter.greet() # Hello
+g = container.get(Greeter)
+g.greet() # Hello
 
 # If class is on behalf of abstract class, the class cannot get by itself from container
 # check `Multiple implementations` section for more complex use case.
