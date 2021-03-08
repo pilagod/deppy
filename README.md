@@ -151,6 +151,28 @@ gm = container.get(GreeterManager)
 gm.greet() # AB
 ```
 
+## Caveat
+
+In order to avoid circular import, it is common to separate interfaces and implementations into different packages.
+
+Package comsumers usually depend only on interfaces,
+resulting in no one to import implementations and thus `injectable` is never called.
+
+For me, I usually put implemetations under `impls` directory besides interfaces. Implemetations can be registered into container by an independent composition root, and just import it and initialize it on application startup:
+
+```python
+# composition_root.py
+
+import glob
+import importlib
+
+def init():
+    impls = glob.glob("**/impls", recursive=True)
+    for impl in impls:
+        importlib.import_module(impl.replace("/", ".").replace("\\", "."))
+
+```
+
 ## License
 
 © Cyan Ho (pilagod), 2021-NOW
