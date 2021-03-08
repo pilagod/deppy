@@ -1,4 +1,4 @@
-# deppy
+# deppy [![Build Status](https://travis-ci.com/pilagod/deppy.svg?branch=master)](https://travis-ci.com/pilagod/deppy) [![Coverage Status](https://coveralls.io/repos/github/pilagod/deppy/badge.svg?branch=master)](https://coveralls.io/github/pilagod/deppy?branch=master)
 
 Dependency injection framework for Python
 
