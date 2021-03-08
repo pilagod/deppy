@@ -1,0 +1,18 @@
+language: python
+
+python:
+  - "3.6"
+  - "3.7"
+  - "3.8"
+  - "3.9"
+
+# command to install dependencies
+install:
+  - pip install coveralls
+  - pip install poetry
+  - poetry install
+
+# command to run tests
+script:
+  - coverage run --source=deppy -m pytest deppy/test
+  - coveralls
